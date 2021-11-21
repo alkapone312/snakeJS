@@ -65,27 +65,8 @@ function gameLoop()
 
 function stopGame(msg)
 {
-	clear(toClear);
+	clearT(toClear);
 	gameAlert(msg);
-	toClear.push(setTimeout(addScore, 3000));
-}
-
-function addScore()
-{
-	msg = `Wpisz swoje imię: 
-		<form>
-			<input type="text" name="name">
-			<button>Ok!</button>
-		</form>
-		<span style="font-size: 16px;">lub wciśnij esc by zagrać ponownie</span>`;
-	gameAlert(msg);
-}
-
-function clearMessage()
-{
-	let alert = document.getElementById("alert");
-	alert.innerHTML = "";
-	alert.style.display = "none";
 }
 
 function restartGame()
